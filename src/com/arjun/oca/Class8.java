@@ -6,7 +6,7 @@ public class Class8 {
         String[] arr = {"I", "N", "S", "E", "R", "T"};
         //System.out.println(arr.length);
         for (int n = 1; n <= arr.length; n += 1) {
-            if (n % 2 == 0) {
+            if (n % 2 == 0) {          // %--returns
                 continue;
             }
             System.out.println(arr[n]);
