@@ -4,6 +4,7 @@ package com.arjun.oca;
 public class Class33 {
     static int start=2;
     final int end;
+
     Class33(int x) {
         x = 4;
         end = x;

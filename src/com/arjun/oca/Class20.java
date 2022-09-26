@@ -5,7 +5,7 @@ class SpecialString{
         this.str=str;
     }
 }
-public class Class20 {
+public class Class20  {
     public static void main(String[] args) {
         Object [] arr= new Object[4];
         System.out.println(arr.length);
@@ -26,4 +26,5 @@ public class Class20 {
             System.out.println(obj);
         }
     }
+
 }
