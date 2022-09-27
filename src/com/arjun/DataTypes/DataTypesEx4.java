@@ -29,6 +29,8 @@ package com.arjun.DataTypes;
  *  digits: 0,1
  *  0B or 0b
  *  int x=0B11111;
+ * Range of int
+ * 4 bytes -128to 127
  *
  * Which are valid declarations?
  *
@@ -40,9 +42,10 @@ public class DataTypesEx4 {
      //int x2=OXFace;
      int x6=0xFace;
      int x3=0xbeef;
+     int xx=0b1111;
     // int x4=0xbeer; //in hexadecimal r is not allowed
      int x5=0xadda;
-
+        System.out.println("xx:"+xx);
 
      int x7=10;
      int x8=010;
@@ -104,5 +107,27 @@ public class DataTypesEx4 {
        // double d17=123_.45; Not Valid
         System.out.println(amit);
 
-    }
+        /**
+         * For every character unicode value
+         * char allowed values are
+         *  0 to 65535
+         * a---->97
+         * b---->98
+         * A--->65
+         * B-->66
+         */
+        char ch='a';
+        char ch1=65535;
+        //char ch2='amit'; Invalid
+        //char ch1="a"; Invalid
+        //char ch1='as'; Invalid
+       char cc=197;
+       char ee=1970;
+       char ch12='\u0061';
+       char ch13='\ubeef';
+       char ch14='\uabcd';
+       //char ch15='\iface'; invalid
+      // char ch16= \u0061; invalid
+        System.out.println("ch12:"+ch12);
+        }
 }
