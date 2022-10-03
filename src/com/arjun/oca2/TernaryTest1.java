@@ -1,6 +1,6 @@
 package com.arjun.oca2;
 
-public class Test5 {
+public class TernaryTest1 {
     public static void main(String[] args) {
         int x=10;
         int a=x++;
