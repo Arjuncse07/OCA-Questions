@@ -1,6 +1,6 @@
 package InterviewQuestions;
 
-public class RemoveDuplicateEelementsArray {
+public class RemoveDuplicateElementsArray {
 
     public static int removeDuplicates(int[] arr, int n) {  //create a method which having the array parameters and n type of the array
         if (n == 0 || n == 1) {
