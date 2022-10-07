@@ -37,24 +37,24 @@ package com.arjun.DataTypes;
  */
 public class DataTypesEx4 {
     public static void main(String[] args) {
-     int x=0777;
-    // int x1=0786;   //In octal digit 8 is not allowed
-     //int x2=OXFace;
-     int x6=0xFace;
-     int x3=0xbeef;
-     int xx=0b1111;
-    // int x4=0xbeer; //in hexadecimal r is not allowed
-     int x5=0xadda;
+        int x=0777;
+        // int x1=0786;   //In octal digit 8 is not allowed
+        //int x2=OXFace;
+        int x6=0xFace;
+        int x3=0xbeef;
+        int xx=0b1111;
+        // int x4=0xbeer; //in hexadecimal r is not allowed
+        int x5=0xadda;
         System.out.println("xx:"+xx);
 
-     int x7=10;
-     int x8=010;
-     int x11=0x10;
-     int x12=0X10;
-     int x10=0B10;
-     int x14=999;
-     //int x9=OX10;
-     //int x15= 10.5; NOT VALID double can't be assign to int
+        int x7=10;
+        int x8=010;
+        int x11=0x10;
+        int x12=0X10;
+        int x10=0B10;
+        int x14=999;
+        //int x9=OX10;
+        //int x15= 10.5; NOT VALID double can't be assign to int
         System.out.println(x7+" "+x8+" "+ x10+ " "+x11+" "+x12+" "+x14);
 
         /**
@@ -66,8 +66,8 @@ public class DataTypesEx4 {
          */
 
         byte b=127;
-       // byte b1=128; NOT VALID above the limit
-       //byte b1=130; NOT VALID
+        // byte b1=128; NOT VALID above the limit
+        //byte b1=130; NOT VALID
 //        byte b2=true; NOT VALID
 //        byte b3="asko";  NOT VALID
         short s=32767;
@@ -80,14 +80,14 @@ public class DataTypesEx4 {
         double d4=123.456d;
 
         double d=0123.456;
-       // double d5=0X123.456; NOT VALID because
+        // double d5=0X123.456; NOT VALID because
         double d6=0XFace;  //Valid , it is integral literal
         double d7=0777;
         double d8=0xbeef;
         //double d9=OXArjun; // O are not allowed
         //double d13=0xArjun; only a-f are allowed
         double d10=0Xface;
-       // double d11=0768; NOT VALID
+        // double d11=0768; NOT VALID
         double d12=0786.0;
         double d13= 1.2e3; //Valid 1.2*3 means1.2* 10^3= 1200.0
         double d14= 1.2e3d;
@@ -102,9 +102,9 @@ public class DataTypesEx4 {
         double d15= 123_34.345;
         int amit= 123_12;
         double d16=1__23_4_56.34;
-       // double 1234.34_; Not Valid
-       // double d16=_123.345; Not valid
-       // double d17=123_.45; Not Valid
+        // double 1234.34_; Not Valid
+        // double d16=_123.345; Not valid
+        // double d17=123_.45; Not Valid
         System.out.println(amit);
 
         /**
@@ -121,13 +121,13 @@ public class DataTypesEx4 {
         //char ch2='amit'; Invalid
         //char ch1="a"; Invalid
         //char ch1='as'; Invalid
-       char cc=197;
-       char ee=1970;
-       char ch12='\u0061';
-       char ch13='\ubeef';
-       char ch14='\uabcd';
-       //char ch15='\iface'; invalid
-      // char ch16= \u0061; invalid
+        char cc=197;
+        char ee=1970;
+        char ch12='\u0061';
+        char ch13='\ubeef';
+        char ch14='\uabcd';
+        //char ch15='\iface'; invalid
+        // char ch16= \u0061; invalid
         System.out.println("ch12:"+ch12);
-        }
+    }
 }
