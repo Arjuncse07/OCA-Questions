@@ -28,11 +28,13 @@ public class CodeJava {
     public static void main(String[] args) {
       Student student=new Student();
         System.out.println(student.getName()+"====="+student.getSid()+"==="+student.getCourse());
+        System.out.println("==============================================================");
 
         student.setName("Arjun");
         student.setSid(1);
         student.setCourse("Java");
 
+        System.out.println("==========================================================");
         Student student1= new Student();
         student1.setSid(2);
         student1.setName("Manish");

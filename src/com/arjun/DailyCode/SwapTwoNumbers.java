@@ -1,6 +1,6 @@
 package com.arjun.DailyCode;
 
-import java.util.Scanner;
+    import java.util.Scanner;
 
 public class SwapTwoNumbers {
     public static void main(String[] args) {

@@ -3,6 +3,15 @@ class Parent{
     private  int age;
     private String name;
     //Why we have to provide default cons.
+
+    /***
+     * Compiler will provide default constructor
+     * syntax of the default constructor is:
+     *   Parent(){
+     *    super();
+     *   }
+     *
+     */
     public Parent(){
 
     }
@@ -49,10 +58,10 @@ public class CodeJava2 {
         Child child= new Child();
         child.childPrint();
         child.parentPrint();
-
+        System.out.println("=====================");
         Parent parent= new Child(); //runtime polymorphism
         parent.parentPrint();
-
+        System.out.println("===================");
         Parent parent1= new Parent();
         parent1.parentPrint();
     }
