@@ -6,7 +6,8 @@ class Russia{
     }
 }
 class Sumit{
-   Russia russia=new Russia(){
+   Russia russia=new Russia()
+   {
         public void sayHello(){
             System.out.println("Hello From anonymous class");
         }
