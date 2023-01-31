@@ -1,2 +1,4 @@
-package AmdocsIntervirew;public class LLQ {
+package AmdocsIntervirew;
+
+public class LLQ {
 }
