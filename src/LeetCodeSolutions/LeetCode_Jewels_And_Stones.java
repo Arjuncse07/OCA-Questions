@@ -6,6 +6,7 @@ jewels = "aA", stones = "aAAbbbb"
 public class LeetCode_Jewels_And_Stones {
     public int numJewelsInStones(String jewels, String stones) {
         int ans=0;
+
         HashMap<Character,Integer> map= new HashMap<>();
 
         for (int i=0; i< stones.length(); i++){

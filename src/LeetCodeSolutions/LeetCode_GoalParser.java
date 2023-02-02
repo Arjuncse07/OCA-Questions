@@ -3,7 +3,9 @@ package LeetCodeSolutions;
 public class LeetCode_GoalParser {
 
     public String interpret(String command) {
+
       StringBuilder stringBuilder= new StringBuilder();
+
       for (int i=0; i<command.length(); i++){
           if (command.charAt(i)=='G'){
               stringBuilder.append("G");
