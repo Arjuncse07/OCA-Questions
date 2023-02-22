@@ -41,7 +41,6 @@ public int romanToInt(String s){
 
     public static void main(String[] args) {
     LeetCode_13Roman_to_Integer romanToInteger = new LeetCode_13Roman_to_Integer();
-        System.out.println(romanToInteger.romanToInt("XI"));
-
+        System.out.println(romanToInteger.romanToInt("IX"));
     }
 }

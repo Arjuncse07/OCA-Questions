@@ -26,7 +26,7 @@ public class Test6 {
               System.out.println("More Spicy");
           }
         };
-       popCorn2.taste();
+        popCorn2.taste();
         System.out.println(popCorn.getClass().getName()); //InnerClass.Test6$1
         System.out.println(popCorn1.getClass().getName()); //InnerClass.PopCorn
         System.out.println(popCorn2.getClass().getName()); //InnerClass.Test6$2

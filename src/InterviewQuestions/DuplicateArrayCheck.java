@@ -13,8 +13,6 @@ public class DuplicateArrayCheck {
             return false;
         }
 
-
-
         for(int i=0; i<arr1.length; i++){
 
             if (arr1[i] != arr2[i]){
@@ -24,7 +22,6 @@ public class DuplicateArrayCheck {
             }
 
         }
-
         return true;
     }
     public static void main(String[] args) {
