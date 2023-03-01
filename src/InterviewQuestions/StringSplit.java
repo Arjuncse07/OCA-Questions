@@ -15,9 +15,9 @@ public class StringSplit {
 
     public static void main(String[] args) {
      String str= "91-8954967745";
-     String[] strArray= str.split("-");
+     String[] strArray= str.split("-");  //Method:1
      printString(strArray, "String split Method");
-      List<String> listString = Pattern.compile("-").splitAsStream(str).collect(Collectors.toList());
+      List<String> listString = Pattern.compile("-").splitAsStream(str).collect(Collectors.toList());  //Method: 2
         System.out.println("Split String using pattern class");
       for (String string1: listString){
           System.out.println(string1);
