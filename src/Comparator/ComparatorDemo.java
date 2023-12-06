@@ -24,16 +24,22 @@ public class ComparatorDemo {
                 .comparingInt(Student::getMarks); */
 
         //Sorting of marks based on descending order
-        Comparator<Student> marksDescendingComparator  = Comparator
-                .comparingInt(Student::getMarks).reversed();
+       /* Comparator<Student> marksDescendingComparator  = Comparator
+                .comparingInt(Student::getMarks).reversed(); */
 
+
+        //Sort based on the names
+        Comparator<Student> sortBasedOnNames = Comparator
+                .comparing(Student::getName);
 
         //sort the list using comparator
         //studentsList.sort(nameAndMarksComparator);
 
         //studentsList.sort(marksComparator);
 
-        studentsList.sort(marksDescendingComparator);
+       // studentsList.sort(marksDescendingComparator);
+
+        studentsList.sort(sortBasedOnNames);
 
         studentsList.forEach( list ->
                 System.out.println(
