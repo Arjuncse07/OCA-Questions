@@ -57,18 +57,7 @@ public class PredicateDemo {
                     userInputFilterList.forEach( e ->
                             System.out.println(e.getName() + "::::" +e.getUnitService() + ":::" +
                                     e.getPayBand()));
-
-
-
        // filteredUserList.forEach(e -> System.out.println(e.getName()+ "::::" +e.getUnitService()));
-
-
-
     }
-
-
-
-
-
 
 }
