@@ -15,13 +15,17 @@ class Employee{
     int empid;
     String empName;
     double empSalary;
+
+    String empDepartment;
+
     String email;
 
-    Employee(int empid, String empName, double empSalary,String email){
+    Employee(int empid, String empName, double empSalary,String email,String empDepartment){
         this.empid=empid;
         this.empName=empName;
         this.empSalary=empSalary;
         this.email= email;
+        this.empDepartment = empDepartment;
     }
     Employee(){
 
@@ -59,11 +63,20 @@ class Employee{
         this.empSalary = empSalary;
     }
 
+    public String getEmpDepartment(){
+        return empDepartment;
+    }
+
+    public void setEmpDepartment(String empDepartment){
+        this.empDepartment = empDepartment;
+    }
+
     public void showDetails(){
         System.out.println("Employee id"+empid);
         System.out.println("Employee Name"+empName);
         System.out.println("Employee Salary"+empSalary);
         System.out.println("Employee Email "+email);
+        System.out.println("Employee Department"+empDepartment);
     }
 
 
@@ -72,25 +85,36 @@ class Employee{
         return employee.getEmail().split("@")[1];
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empid=" + empid +
+                ", empName='" + empName + '\'' +
+                ", empSalary=" + empSalary +
+                ", empDepartment='" + empDepartment + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
 
 public class Cls extends Employee{
 
-
     public static void main(String[] args) {
         List<Employee> employeeList= new ArrayList<>();
-        employeeList.add(new Employee(1,"Arjun",58545.25,"arjun@gmail.com"));
-        employeeList.add(new Employee(2,"Ravi",23545.25,"ravisona@rediffmail.com"));
-        employeeList.add(new Employee(3,"Sumit",18545.25,"sumit124@gmail.com"));
-        employeeList.add(new Employee(4,"Karan",58545.25,"karan12@rediffmail.com"));
-        employeeList.add(new Employee(5,"Aujila",2322.25,"Ahujua@rediffmail.com"));
-        employeeList.add(new Employee(6,"Dalveer",325.25,"dalveeer12@gmail.com"));
-        employeeList.add(new Employee(7,"Simran",1545.25,"simran123@gmail.com"));
-        employeeList.add(new Employee(8,"Kushpreet",1000.25,"kushpreetSingh123@gmail.com"));
-        employeeList.add(new Employee(9,"Simranjeet Singh",25700.00,"simranjeet@gmail.com"));
-        employeeList.add(new Employee(10,"Umesh Chandra",165700.50,"umeshchndra@gmail.com"));
-        employeeList.add(new Employee(11,"Upendra Kumar",145470.50,"umeshchandra@rediffmail.com"));
-        employeeList.add(new Employee(12,"Sonu Kumar",741000.10,"sonutechtreeit@gmail.com"));
+        employeeList.add(new Employee(1,"Arjun",58545.25,"arjun@gmail.com","DTS(Defence Travel System"));
+        employeeList.add(new Employee(2,"Ravi",23545.25,"ravisona@rediffmail.com","CGDA(Controller General Of Defence Accounts)"));
+        employeeList.add(new Employee(3,"Sumit",18545.25,"sumit124@gmail.com","CGDA(Controller General Of Defence Accounts)"));
+        employeeList.add(new Employee(4,"Karan",58545.25,"karan12@rediffmail.com","CGDA(Controller General Of Defence Accounts)"));
+        employeeList.add(new Employee(5,"Aujila",2322.25,"Ahujua@rediffmail.com","DTS(Defence Travel System"));
+        employeeList.add(new Employee(6,"Dalveer",325.25,"dalveeer12@gmail.com","APS(Army Postal Service)"));
+        employeeList.add(new Employee(7,"Simran",1545.25,"simran123@gmail.com","MNS(Ministry Nursing Services)"));
+        employeeList.add(new Employee(8,"Kushpreet",1000.25,"kushpreetSingh123@gmail.com","DTS(Defence Travel System"));
+        employeeList.add(new Employee(9,"Simranjeet Singh",25700.00,"simranjeet@gmail.com","DTS(Defence Travel System"));
+        employeeList.add(new Employee(10,"Umesh Chandra",165700.50,"umeshchndra@gmail.com","APS(Army Postal Service)"));
+        employeeList.add(new Employee(11,"Upendra Kumar",145470.50,"umeshchandra@rediffmail.com","APS(Army Postal Service)"));
+        employeeList.add(new Employee(12,"Sonu Kumar",741000.10,"sonutechtreeit@gmail.com","DSC(Defence Security Corps)"));
+        employeeList.add(new Employee(13,"Chirenjive Kumar",158700.10,"sonutechtreeit@gmail.com","DSC(Defence Security Corps)"));
+
 
         List<Double> employeeSalary= employeeList.stream()
                 .filter( e -> e.empSalary < 10000)
@@ -101,7 +125,9 @@ public class Cls extends Employee{
 
 
         //Converting Product list into Map
-        Map<Integer,String> employeeSalaryMap= employeeList.stream().collect(Collectors.toMap(e-> e.empid,e ->e.empName));
+        Map<Integer,String> employeeSalaryMap= employeeList
+                .stream()
+                .collect(Collectors.toMap(e-> e.empid,e ->e.empName));
         System.out.println(employeeSalaryMap);
 
         //Count the number of employee based on the salary
@@ -116,7 +142,6 @@ public class Cls extends Employee{
 //                .map(employee -> employeeSalary)
 //                .collect(Collectors.toSet());
 //        System.out.println(employeeSalrayList);
-
         //
 
 
@@ -124,7 +149,8 @@ public class Cls extends Employee{
        Map<String,Long>  employeeEmailCountMap = employeeList.stream()
                .collect(
                        Collectors.groupingBy(
-                           employee -> employee.getEmailProvider(employee), Collectors.counting()
+                           employee -> employee
+                                   .getEmailProvider(employee), Collectors.counting()
                        )
                );
 
